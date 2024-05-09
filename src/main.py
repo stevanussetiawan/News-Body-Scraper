@@ -2,12 +2,12 @@ from get_isi_berita import GetIsiBerita
 
 NAMA_FILE = "links.txt"
 
+with open(NAMA_FILE, "r") as f:
+    all_links = f.readlines()
 
-df = pd.read_excel("testing_crawling_03_05_2024.xlsx", "data_melanggar")
-isi_links = df["LINK"].unique().tolist()
 list_berita = []
 count = 1
-for link in isi_links:
+for link in all_links:
     tmp_list = []
     isi_berita = GetIsiBerita().request_web(link)
     print(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> {count}/{len(isi_links)}")
