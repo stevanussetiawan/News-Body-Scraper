@@ -1,5 +1,7 @@
-import pandas as pd
 from get_isi_berita import GetIsiBerita
+
+NAMA_FILE = "links.txt"
+
 
 df = pd.read_excel("testing_crawling_03_05_2024.xlsx", "data_melanggar")
 isi_links = df["LINK"].unique().tolist()
