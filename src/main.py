@@ -10,7 +10,6 @@ count = 1
 for link in all_links:
     tmp_list = []
     isi_berita = GetIsiBerita().request_web(link)
-    print(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> {count}/{len(isi_links)}")
     count += 1
     tmp_list.append(link)
     tmp_list.append(isi_berita)
