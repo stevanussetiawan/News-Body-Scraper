@@ -3,7 +3,7 @@ from get_isi_berita import GetIsiBerita
 NAMA_FILE = "links.txt"
 
 with open(NAMA_FILE, "r") as f:
-    all_links = f.readlines()
+    all_links = f.read().split('\n')
 
 list_berita = []
 count = 1
