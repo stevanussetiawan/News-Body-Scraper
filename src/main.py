@@ -16,5 +16,4 @@ for link in all_links:
     list_berita.append(tmp_list)
     
 df_link_berita = pd.DataFrame(list_berita, columns=["LINK", "ISI BERITA"])
-print(df_link_berita)
 df_link_berita.to_excel("df_links_isi_berita.xlsx")
