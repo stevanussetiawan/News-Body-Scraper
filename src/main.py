@@ -6,11 +6,9 @@ with open(NAMA_FILE, "r") as f:
     all_links = f.read().split('\n')
 
 list_berita = []
-count = 1
 for link in all_links:
     tmp_list = []
     isi_berita = GetIsiBerita().request_web(link)
-    count += 1
     tmp_list.append(link)
     tmp_list.append(isi_berita)
     list_berita.append(tmp_list)
