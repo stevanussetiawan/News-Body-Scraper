@@ -7,8 +7,8 @@ with open(NAMA_FILE, "r") as f:
 
 list_berita = []
 for link in all_links:
-    tmp_list = []
     isi_berita = GetIsiBerita().request_web(link)
+    tmp_list = []
     tmp_list.append(link)
     tmp_list.append(isi_berita)
     list_berita.append(tmp_list)
