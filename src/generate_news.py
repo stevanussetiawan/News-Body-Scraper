@@ -3,7 +3,7 @@ from news_content_fetcher import NewsContentFetcher
 
 def generate_news_to_excel():
     # Load the Excel file and extract unique links
-    df = pd.read_excel("testing_crawling_03_05_2024.xlsx", "data_melanggar").head(10)
+    df = pd.read_excel(r"data/testing_crawling_03_05_2024.xlsx", "data_melanggar").head(10)
     isi_links = df["LINK"].unique().tolist()
     
     # Initialize the content fetcher
