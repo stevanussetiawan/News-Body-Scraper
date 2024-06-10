@@ -18,7 +18,7 @@ def generate_news_to_excel():
     # Create a DataFrame from the results and save to an Excel file
     df_link_berita = pd.DataFrame(list_berita, columns=["LINK", "ISI BERITA"])
     print(df_link_berita)
-    df_link_berita.to_excel("df_links_isi_berita.xlsx", index=False)
+    df_link_berita.to_excel(r"data/df_links_isi_berita.xlsx", index=False)
 
 if __name__ == "__main__":
     generate_news_to_excel()
